@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clinton Goode — Portfolio</title>
+<meta name="description" content="Content strategist, account lead, and creator partner. FaZe Clan, CORE/Adapt, Behave Modeling Agency.">
+<meta property="og:title" content="Clinton Goode — Portfolio">
+<meta property="og:description" content="$36M+ revenue managed · +69% YoY growth · 15+ productions with FaZe Clan & CORE/Adapt">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Clinton Goode — Portfolio">
+<meta name="twitter:description" content="$36M+ revenue managed · +69% YoY growth · 15+ productions">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#080808;--s1:#101010;--s2:#161616;--s3:#1c1c1c;
+  --border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.13);
+  --text:#f0ede8;--muted:#909090;--dim:#505050;
+  --accent:#e8ff47;--faze:#ff4040;--core:#4090ff;--behave:#b8ff9f;
+  --r:14px;--rs:8px;
+  --spring:cubic-bezier(0.16,1,0.3,1);
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;font-weight:400;min-height:100vh;overflow-x:hidden}
+body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:.5}
+.wrap{position:relative;z-index:1;max-width:1120px;margin:0 auto;padding:0 36px}
+
+/* ── HEADER ── */
+header{padding:80px 0 52px;border-bottom:1px solid var(--border);margin-bottom:52px}
+.header-inner{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.eyebrow{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--dim);margin-bottom:12px}
+.name-block{display:inline-flex;flex-wrap:wrap;gap:6px;align-items:baseline}
+.name-first{background:var(--accent);color:#080808;padding:2px 16px 6px;border-radius:6px;display:inline-block;font-family:'Bebas Neue',sans-serif;font-size:clamp(60px,9vw,96px);line-height:.92;letter-spacing:.02em}
+.name-last{color:var(--accent);font-family:'Bebas Neue',sans-serif;font-size:clamp(60px,9vw,96px);line-height:.92;letter-spacing:.02em}
+.header-sub{font-size:13px;color:var(--muted);margin-top:12px;font-weight:300;letter-spacing:.02em}
+.stat-row{display:flex;gap:36px;justify-content:flex-end}
+.stat{text-align:left}
+.stat-num{font-family:'Bebas Neue',sans-serif;font-size:38px;color:var(--accent);line-height:1}
+.stat-label{font-size:10px;color:var(--dim);letter-spacing:.1em;text-transform:uppercase;margin-top:3px}
+
+/* ── FILTERS ── */
+.filter-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:52px;align-items:center}
+.filter-label{font-size:10px;color:var(--dim);letter-spacing:.14em;text-transform:uppercase;margin-right:8px}
+.filter-btn{font-family:'Outfit',sans-serif;font-size:12px;font-weight:500;padding:8px 20px;border-radius:999px;border:1px solid var(--border);background:transparent;color:var(--muted);cursor:pointer;transition:all .2s;letter-spacing:.02em}
+.filter-btn:hover{border-color:var(--border2);color:var(--text);background:rgba(255,255,255,.04)}
+.filter-btn.active{background:var(--accent);border-color:var(--accent);color:#080808;font-weight:600}
+
+/* ── SECTION HEAD ── */
+.section-head{display:flex;align-items:center;gap:14px;margin:60px 0 16px}
+.sdot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.sname{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:.08em}
+.sline{flex:1;height:1px;background:var(--border)}
+
+/* ── CONTRIB BRIEF ── */
+.contrib-brief{border-left:3px solid;border-radius:0 var(--rs) var(--rs) 0;padding:16px 20px 18px;margin-bottom:24px;background:var(--s1)}
+.contrib-brief.bf{border-color:var(--faze)}
+.contrib-brief.bc{border-color:var(--core)}
+.contrib-eye{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--dim);margin-bottom:6px}
+.contrib-txt{font-size:13px;color:var(--muted);line-height:1.75;font-weight:300}
+.contrib-txt strong{color:var(--text);font-weight:500}
+
+/* ── CARD GRID ── */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;margin-bottom:8px}
+
+/* ── WORK CARD ── */
+.work-card{background:var(--s1);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;text-decoration:none;color:inherit;display:flex;flex-direction:column;cursor:pointer;
+  transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease,opacity .6s var(--spring)}
+.work-card:hover{transform:translateY(-4px);border-color:var(--border2);box-shadow:0 24px 64px rgba(0,0,0,.55)}
+.card-thumb{width:100%;aspect-ratio:16/9;position:relative;overflow:hidden;background:var(--s2);flex-shrink:0}
+.card-thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease}
+.work-card:hover .card-thumb img{transform:scale(1.05)}
+.thumb-overlay{position:absolute;inset:0;background:linear-gradient(0deg,rgba(0,0,0,.6) 0%,rgba(0,0,0,.1) 60%);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .2s}
+.work-card:hover .thumb-overlay{opacity:1}
+.play-btn{width:48px;height:48px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;transform:scale(.8);transition:transform .2s}
+.work-card:hover .play-btn{transform:scale(1)}
+.play-btn svg{width:18px;height:18px;fill:#080808;margin-left:3px}
+.cat-badge{position:absolute;top:10px;left:10px;font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:4px 10px;border-radius:999px;backdrop-filter:blur(12px)}
+.cat-badge.bf{background:rgba(255,64,64,.2);color:#ff8888;border:1px solid rgba(255,64,64,.3)}
+.cat-badge.bc{background:rgba(64,144,255,.2);color:#88bbff;border:1px solid rgba(64,144,255,.3)}
+.thumb-fallback{width:100%;height:100%;display:none;align-items:center;justify-content:center;font-size:32px;background:var(--s3)}
+.card-body{padding:16px 18px 20px;display:flex;flex-direction:column;flex:1}
+.card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.card-tag{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+.ext-icon{opacity:0;transition:opacity .2s;color:var(--accent)}
+.work-card:hover .ext-icon{opacity:1}
+.ext-icon svg{width:13px;height:13px;stroke:currentColor;fill:none;stroke-width:2}
+.card-name{font-size:14px;font-weight:600;line-height:1.3;color:var(--text);margin-bottom:5px}
+.card-concept{font-size:11px;font-weight:600;color:var(--accent);margin-bottom:8px;letter-spacing:.01em}
+.card-desc{font-size:11.5px;color:var(--muted);line-height:1.65;font-weight:300;margin-bottom:12px}
+.card-role{margin-top:auto;padding-top:12px;border-top:1px solid rgba(255,255,255,.06);display:flex;gap:8px;align-items:flex-start}
+.role-diamond{color:var(--accent);font-size:9px;margin-top:2px;flex-shrink:0;line-height:1}
+.role-label{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:3px}
+.role-detail{font-size:11px;color:var(--muted);line-height:1.6;font-weight:300}
+
+/* ── BEHAVE ── */
+.behave-block{background:var(--s1);border:1px solid var(--border);border-radius:var(--r);overflow:hidden;margin-top:16px}
+.behave-header{padding:28px 32px 24px;border-bottom:1px solid var(--border);display:flex;align-items:flex-start;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.bhv-logo{width:52px;height:52px;border-radius:12px;background:#0c1a09;border:1px solid rgba(184,255,159,.2);display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:.08em;color:var(--behave);flex-shrink:0}
+.bhv-name{font-size:18px;font-weight:600;color:var(--text)}
+.bhv-role{font-size:11px;color:var(--behave);margin-top:3px;letter-spacing:.06em;text-transform:uppercase;font-weight:600}
+.bhv-tenure{font-size:10px;color:var(--dim);letter-spacing:.1em;text-transform:uppercase;padding:7px 16px;border:1px solid var(--border);border-radius:999px;white-space:nowrap;align-self:center}
+.kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--border)}
+.kpi-cell{padding:24px 24px 22px;border-right:1px solid var(--border);position:relative;overflow:hidden;transition:background .2s}
+.kpi-cell:last-child{border-right:none}
+.kpi-cell::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--behave);transform:scaleX(0);transform-origin:left;transition:transform .4s ease}
+.kpi-cell:hover::after{transform:scaleX(1)}
+.kpi-cell:hover{background:rgba(184,255,159,.03)}
+.kpi-label{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin-bottom:6px}
+.kpi-value{font-family:'Bebas Neue',sans-serif;font-size:40px;letter-spacing:.02em;color:var(--text);line-height:1;margin-bottom:5px}
+.kpi-value span{color:var(--behave)}
+.kpi-sub{font-size:10.5px;color:var(--muted);line-height:1.5;font-weight:300}
+.chart-area{padding:24px 28px;border-bottom:1px solid var(--border)}
+.chart-label{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);margin-bottom:16px}
+.bar-chart{display:flex;align-items:flex-end;gap:3px;height:90px}
+.bar-wrap{flex:1;display:flex;flex-direction:column;align-items:center;height:100%;justify-content:flex-end;position:relative}
+.bar{width:100%;border-radius:3px 3px 0 0;cursor:default;transform-origin:bottom center;transition:opacity .15s}
+.bar-wrap:hover .bar{opacity:.7}
+.bar-tooltip{position:absolute;bottom:calc(100% + 6px);left:50%;transform:translateX(-50%);background:var(--s3);border:1px solid var(--border2);border-radius:6px;padding:4px 10px;font-size:10px;font-weight:600;color:var(--text);white-space:nowrap;pointer-events:none;opacity:0;transition:opacity .15s;z-index:10}
+.bar-wrap:hover .bar-tooltip{opacity:1}
+.bar-yr{font-size:8px;color:var(--dim);letter-spacing:.04em;margin-top:5px;text-align:center;height:12px}
+.growth-row{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--border)}
+.growth-cell{padding:22px 28px}
+.growth-cell:first-child{border-right:1px solid var(--border)}
+.growth-eye{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin-bottom:10px}
+.growth-nums{display:flex;gap:28px;align-items:flex-end}
+.g-num{font-family:'Bebas Neue',sans-serif;font-size:50px;line-height:1;color:var(--behave)}
+.g-num.neutral{color:var(--text)}
+.g-desc{font-size:11px;color:var(--muted);margin-top:4px;line-height:1.5;font-weight:300}
+.bhv-pills{padding:18px 28px;display:flex;gap:8px;flex-wrap:wrap}
+.bhv-pill{font-size:10px;font-weight:600;padding:5px 14px;border-radius:999px;border:1px solid rgba(184,255,159,.2);color:var(--behave);background:rgba(184,255,159,.05);letter-spacing:.04em}
+
+/* ── TIKTOK ── */
+.tiktok-block{background:var(--s1);border:1px solid var(--border);border-radius:var(--r);padding:28px 32px;display:block;text-decoration:none;color:inherit;transition:border-color .25s,box-shadow .25s,transform .25s;position:relative;overflow:hidden;margin-top:16px}
+.tiktok-block::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--accent),transparent);opacity:0;transition:opacity .3s}
+.tiktok-block:hover{border-color:rgba(232,255,71,.2);box-shadow:0 20px 60px rgba(0,0,0,.4);transform:translateY(-2px)}
+.tiktok-block:hover::before{opacity:1}
+.tiktok-top{display:flex;align-items:center;gap:16px;margin-bottom:20px}
+.tiktok-icon{width:50px;height:50px;border-radius:12px;background:#000;display:flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid rgba(255,255,255,.1)}
+.tiktok-icon svg{width:26px;height:26px}
+.tiktok-handle{font-size:16px;font-weight:600}
+.tiktok-platform{font-size:11px;color:var(--dim);margin-top:3px}
+.poc-badge{font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:6px 16px;border-radius:999px;background:rgba(232,255,71,.1);color:var(--accent);border:1px solid rgba(232,255,71,.25);margin-left:auto}
+.tiktok-divider{height:1px;background:var(--border);margin-bottom:20px}
+.tiktok-statement{font-size:13.5px;color:var(--muted);line-height:1.8;font-weight:300;max-width:780px;margin-bottom:20px}
+.tiktok-statement strong{color:var(--text);font-weight:500}
+.pill-row{display:flex;gap:8px;flex-wrap:wrap}
+.pill{font-size:10px;font-weight:500;padding:5px 14px;border-radius:999px;border:1px solid var(--border);color:var(--dim);letter-spacing:.04em;transition:all .2s}
+.pill:hover{border-color:var(--accent);color:var(--accent)}
+
+/* ── FOOTER ── */
+footer{margin-top:100px;padding:32px 0 52px;border-top:1px solid var(--border);text-align:center}
+.footer-text{font-size:12px;color:var(--dim);letter-spacing:.06em}
+
+/* ════════════════════════════════════════
+   SCROLL ANIMATION SYSTEM
+   CSS-driven — JS adds .is-visible
+════════════════════════════════════════ */
+
+/* Pre-animation states — set immediately, no flash */
+.anim-fade-up{opacity:0;transform:translateY(12px);transition:opacity .6s var(--spring),transform .6s var(--spring)}
+.anim-fade-up.is-visible{opacity:1;transform:translateY(0)}
+
+/* KPI cells — individual fade-up with stagger via --delay var */
+.anim-kpi{opacity:0;transform:translateY(12px);transition:opacity .6s var(--spring),transform .6s var(--spring);transition-delay:var(--delay,0ms)}
+.anim-kpi.is-visible{opacity:1;transform:translateY(0)}
+
+/* Number roll — shown immediately as static, JS replaces content */
+.anim-num{display:inline}
+
+/* Bars — grow from bottom via scaleY */
+.bar{transform:scaleY(0);transform-origin:bottom center}
+.bar.is-visible{transform:scaleY(1)}
+/* Each bar gets its own transition-delay via --bar-delay inline style */
+
+/* Growth numbers */
+.anim-gnum{opacity:0;transform:translateY(10px);transition:opacity .6s var(--spring),transform .6s var(--spring);transition-delay:var(--delay,0ms)}
+.anim-gnum.is-visible{opacity:1;transform:translateY(0)}
+
+/* Contrib brief */
+.anim-contrib{opacity:0;transform:translateY(12px);transition:opacity .6s var(--spring),transform .6s var(--spring)}
+.anim-contrib.is-visible{opacity:1;transform:translateY(0)}
+
+/* Cards — stagger handled via inline transition-delay */
+.work-card{opacity:0;transform:translateY(12px)}
+.work-card.is-visible{opacity:1;transform:translateY(0)}
+/* Override hover so it works after visible */
+.work-card.is-visible:hover{transform:translateY(-4px)}
+
+/* TikTok block */
+.anim-block{opacity:0;transform:translateY(12px);transition:opacity .6s var(--spring),transform .6s var(--spring)}
+.anim-block.is-visible{opacity:1;transform:translateY(0)}
+
+/* Pills stagger */
+.anim-pill{opacity:0;transform:translateY(8px);transition:opacity .5s var(--spring),transform .5s var(--spring);transition-delay:var(--delay,0ms)}
+.anim-pill.is-visible{opacity:1;transform:translateY(0)}
+
+/* ── REDUCED MOTION — skip all, show final states ── */
+@media(prefers-reduced-motion:reduce){
+  .anim-fade-up,.anim-kpi,.anim-gnum,.anim-contrib,.work-card,.anim-block,.anim-pill{
+    opacity:1!important;transform:none!important;transition:none!important
+  }
+  .bar{transform:scaleY(1)!important;transition:none!important}
+}
+
+/* ── RESPONSIVE ── */
+@media(max-width:700px){
+  .wrap{padding:0 20px}
+  header{padding:52px 0 36px}
+  .header-inner{flex-direction:column;align-items:flex-start}
+  .stat-row{justify-content:flex-start;gap:24px}
+  .card-grid{grid-template-columns:1fr}
+  .kpi-grid{grid-template-columns:repeat(2,1fr)}
+  .kpi-cell{border-bottom:1px solid var(--border)}
+  .growth-row{grid-template-columns:1fr}
+  .growth-cell:first-child{border-right:none;border-bottom:1px solid var(--border)}
+  .behave-header{padding:20px}
+  .chart-area{padding:18px 20px}
+  .bhv-pills{padding:16px 20px}
+  .tiktok-block{padding:20px}
+  .tiktok-top{flex-wrap:wrap}
+  .poc-badge{margin-left:0}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HEADER — no entrance animation per spec -->
+  <header>
+    <div class="header-inner">
+      <div>
+        <p class="eyebrow">Content Strategist · Account Lead · Creator Partner</p>
+        <div class="name-block">
+          <span class="name-first">Clinton</span>
+          <span class="name-last">Goode</span>
+        </div>
+        <p class="header-sub">FaZe Clan &nbsp;·&nbsp; CORE / Adapt &nbsp;·&nbsp; Behave Modeling Agency</p>
+      </div>
+      <div>
+        <div class="stat-row">
+          <div class="stat">
+            <div class="stat-num"
+              data-count="36"
+              data-prefix="$"
+              data-suffix="M+">$36M+</div>
+            <div class="stat-label">Revenue managed</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num"
+              data-count="69"
+              data-prefix="+"
+              data-suffix="%">+69%</div>
+            <div class="stat-label">YoY growth</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num"
+              data-count="15"
+              data-prefix=""
+              data-suffix="+">15+</div>
+            <div class="stat-label">Productions</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- FILTERS — no entrance animation per spec -->
+  <div class="filter-bar">
+    <span class="filter-label">Filter</span>
+    <button class="filter-btn active" data-filter="all">All work</button>
+    <button class="filter-btn" data-filter="faze">FaZe Clan</button>
+    <button class="filter-btn" data-filter="core">CORE / Adapt</button>
+    <button class="filter-btn" data-filter="brand">Brand deals</button>
+  </div>
+
+  <div id="main-content"></div>
+
+  <footer>
+    <p class="footer-text">Clinton Goode &nbsp;·&nbsp; Content Strategist &nbsp;·&nbsp; All videos open on YouTube</p>
+  </footer>
+</div>
+
+<script>
+// ════════════════════════════════════════
+// DATA
+// ════════════════════════════════════════
+const contributions = {
+  faze: `Every piece of FaZe content I touched required more than showing up on set. I was <strong>embedded in the process</strong> — identifying which moments were worth building around, shaping the creative angle, and making sure execution landed with the audience that mattered. Whether it was recognizing that Rain's recovery was a story the world needed to see, or knowing exactly how to frame a brand deal so it didn't feel like one, my contribution lived in the <strong>strategy before the camera ever rolled</strong> and in the judgment calls made while it was running.`,
+  core: `With Adapt and the CORE crew, my job was helping <strong>translate who they genuinely are into content that hit beyond their existing audience</strong>. I identified the lifestyle angles — basketball, collectibles, anime, events — that could expand their identity without losing authenticity. I was involved in <strong>concept development, talent coordination, and ecosystem thinking</strong> — making sure each piece served a purpose in the larger content strategy, not just as a one-off upload.`
+};
+
+const works = [
+  { title:'FaZe Rain — First Steps', tag:'Documentary', category:'faze', url:'https://www.youtube.com/watch?v=eDG4FKodokE', vid:'eDG4FKodokE', concept:'Vulnerability as virality', desc:"Rain's first public steps after his near-fatal health scare. Turned a deeply personal milestone into one of the most emotional pieces in gaming content history.", roleLabel:'Strategy · Concept', roleDetail:"Recognized this as a landmark cultural moment before it was treated as one. Pushed for raw, unfiltered documentation — the restraint is what made it resonate." },
+  { title:'FaZe Rain — Custom Wheelchair', tag:'Documentary', category:'faze', url:'https://www.youtube.com/watch?v=MrSsxu4_Fis', vid:'MrSsxu4_Fis', concept:'Community rallying around a member', desc:'FaZe builds Rain a fully custom electric wheelchair. Reinforced the idea that FaZe is a family, not just a brand — content with real emotional stakes.', roleLabel:'Talent Development · In the Trenches', roleDetail:'Coordinated the talent involved and shaped the narrative framing — positioning this as a community story, not a charity piece. Kept the tone human from concept through execution.' },
+  { title:'FaZe Clan Goes Public', tag:'Milestone', category:['faze','brand'], url:'https://www.youtube.com/watch?v=EZXmIdXZNBg', vid:'EZXmIdXZNBg', concept:'Historic moment, creator-first framing', desc:"Capturing FaZe's NYSE listing in a way that felt celebratory and human — not corporate. Making a Wall Street event feel meaningful to a Gen Z gaming audience.", roleLabel:'Strategy · Concept', roleDetail:"Advised on how to frame the NYSE moment so it landed with the fanbase rather than shareholders. The angle needed to feel like a win for the culture, not a press release." },
+  { title:'FaZe Clan × Porsche', tag:'Partnership', category:['faze','brand'], url:'https://www.youtube.com/watch?v=grTbPh2zEJU', vid:'grTbPh2zEJU', concept:'Luxury brand meets gaming culture', desc:"Bridging two worlds that don't obviously overlap. Showed how gaming audiences can authentically receive premium brand partnerships when execution respects their culture.", roleLabel:'Strategy · Brand Integration', roleDetail:"Worked on the integration approach — making sure the Porsche partnership felt earned and contextually native to FaZe's world rather than a logo placement." },
+  { title:"FaZe Clan × McDonald's", tag:'Partnership', category:['faze','brand'], url:'https://www.youtube.com/watch?v=G-VVMEhTSxg', vid:'G-VVMEhTSxg', concept:'Mass-market collab done authentically', desc:"One of the most culturally visible gaming-brand crossovers. The challenge was making a McDonald's deal feel native to the FaZe universe rather than a forced ad.", roleLabel:'Strategy · In the Trenches', roleDetail:"On the ground ensuring the content felt like FaZe being FaZe — not FaZe doing a McDonald's ad. That distinction is everything with an audience that can smell inauthenticity." },
+  { title:'Destroying Joins FaZe Clan', tag:'Announcement', category:'faze', url:'https://www.youtube.com/watch?v=-yTi38lyBdo', vid:'-yTi38lyBdo', concept:'Signing as a cinematic event', desc:'Turned a talent announcement into a must-watch moment. Recruitment reveals can carry the same weight as sports signings when produced with the right energy.', roleLabel:'Talent Development · Concept', roleDetail:'Involved in identifying Destroying as the right fit and shaping how the announcement was rolled out. A signing reveal is only as big as the story built around it.' },
+  { title:'FaZe Rug Birthday', tag:'Event', category:'faze', url:'https://www.youtube.com/watch?v=w0Zzv3Q06xo', vid:'w0Zzv3Q06xo', concept:'Lifestyle content at scale', desc:'A creator birthday becomes a full cultural moment — celebrity appearances, fan energy, and behind-the-scenes access positioning FaZe as a lifestyle brand.', roleLabel:'In the Trenches · Strategy', roleDetail:'Present and coordinating event content — making sure cameras were in the right place and the story being captured was the one worth telling.' },
+  { title:'CORE Pickup Basketball', tag:'Lifestyle', category:'core', url:'https://www.youtube.com/watch?v=mQrOBIzky5E', vid:'mQrOBIzky5E', concept:'IRL identity for an online brand', desc:"Adapt and the CORE crew hit the courts. Showed the crew's off-screen camaraderie and expanded their content identity beyond gaming into everyday life.", roleLabel:'Concept · Strategy', roleDetail:"Pushed for lifestyle content that showed the crew as real people with real interests. Basketball wasn't random — it was a deliberate expansion of their identity." },
+  { title:'CORE PO Box Opening', tag:'Community', category:'core', url:'https://www.youtube.com/watch?v=ESWjfU6Eauw', vid:'ESWjfU6Eauw', concept:'Fan connection as content', desc:'Unboxing fan gifts and turning genuine audience love into shareable moments. Simple format, high emotional return — a trust-builder between creator and community.', roleLabel:'Strategy · Concept', roleDetail:'Identified community-facing formats like this as high-trust, low-cost content that consistently punches above its weight. The relationship with the audience is the product.' },
+  { title:'CORE Collectible Setup', tag:'Lifestyle', category:'core', url:'https://www.youtube.com/watch?v=U3DXDfCT1Bo', vid:'U3DXDfCT1Bo', concept:'Passion niche crossover', desc:"Tapping into the collectibles space to reach adjacent communities. Merging Adapt's personal interests with audience discovery — content that attracts new viewers organically.", roleLabel:'Strategy · Talent Development', roleDetail:"Helped Adapt understand the value of leaning into his genuine interests as content pillars. Authenticity-first content like this doesn't just retain — it expands." },
+  { title:'Anime Expo Pt. 1', tag:'Event', category:'core', url:'https://www.youtube.com/watch?v=c9F--7-Kx-k', vid:'c9F--7-Kx-k', concept:'Culture entry point', desc:'First-person coverage of one of the largest anime conventions in North America. Positioned Adapt at the intersection of gaming and anime — two massively overlapping communities.', roleLabel:'Strategy · In the Trenches', roleDetail:"Saw the anime/gaming overlap as an underexploited lane and pushed for boots-on-the-ground coverage. Was present helping capture the energy that makes this feel real." },
+  { title:'Anime Convention', tag:'Event', category:'core', url:'https://www.youtube.com/watch?v=61djK0e2tTY', vid:'61djK0e2tTY', concept:'Shared fandom, expanded reach', desc:"Deep dive into convention culture. Reinforced Adapt's credibility within anime spaces and drove cross-audience discovery.", roleLabel:'Concept · In the Trenches', roleDetail:"Helped map what to capture and how to approach the community authentically. Convention content lives or dies on genuine participation — fans can tell when you're faking it." },
+  { title:'Trading Card Shop', tag:'Lifestyle', category:'core', url:'https://www.youtube.com/watch?v=U_1Yx1ZJb1w', vid:'U_1Yx1ZJb1w', concept:'Creator as collector', desc:"Visiting a trading card shop leaning into Adapt's genuine passion for collectibles. Authenticity-first content that makes the audience feel they're hanging out, not watching a video.", roleLabel:'Talent Development · Concept', roleDetail:"Reinforced to Adapt that his personal passions are content assets, not distractions. The trading card niche has its own passionate audience — meeting them builds lasting loyalty." },
+  { title:'Water Park in the Backyard', tag:'Event', category:'core', url:'https://www.youtube.com/watch?v=Imdd4cOXXnw', vid:'Imdd4cOXXnw', concept:'Go big or stay home', desc:'CORE builds an insane backyard setup. High-spectacle, high-shareability content that generates clips and conversation far beyond the original video.', roleLabel:'Concept · In the Trenches', roleDetail:"Pushed for the scale that makes this format work — a half-measure doesn't go viral. On the ground making sure the chaos was captured in a way that translated on screen." },
+  { title:'Jason Theween House Party', tag:'Event', category:'core', url:'https://www.youtube.com/watch?v=Oh8VUpQXSwI', vid:'Oh8VUpQXSwI', concept:'Creator collisions drive reach', desc:"CORE links up with Jason Theween for a crossover content play. Celebrity-adjacent moments that pull in new audiences through shared viewership.", roleLabel:'Strategy · Talent Development', roleDetail:"Identified the crossover value and helped facilitate the collab. Each audience discovery moment like this compounds — it's long-game thinking in a short-form world." }
+];
+
+const monthly = [
+  ['Jan 22',588802],['Feb 22',490143],['Mar 22',492832],['Apr 22',421255],
+  ['May 22',499384],['Jun 22',483306],['Jul 22',509238],['Aug 22',715764],
+  ['Sep 22',768770],['Oct 22',793760],['Nov 22',893885],['Dec 22',1124635],
+  ['Jan 23',960153],['Feb 23',802547],['Mar 23',1037272],['Apr 23',1105866],
+  ['May 23',1095010],['Jun 23',1099079],['Jul 23',1183109],['Aug 23',1207150],
+  ['Sep 23',1184949],['Oct 23',1189707],['Nov 23',1152113],['Dec 23',1161621],
+  ['Jan 24',1282260],['Feb 24',1177154],['Mar 24',1344273],['Apr 24',1377090],
+  ['May 24',1305340],['Jun 24',1157595],['Jul 24',1196285],['Aug 24',1208181],
+  ['Sep 24',1125273],['Oct 24',1382785],['Nov 24',1231300],['Dec 24',1250416],
+  ['Jan 25',1119064],['Feb 25',1109365],['Mar 25',1209556],['Apr 25',1151800]
+];
+
+// ════════════════════════════════════════
+// ANIMATION ENGINE
+// ════════════════════════════════════════
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// Single shared IntersectionObserver
+const observed = new Set();
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const el = entry.target;
+    if (observed.has(el)) return;
+    observed.add(el);
+    io.unobserve(el);
+
+    const type = el.dataset.animType;
+
+    if (type === 'num') {
+      animateNumber(el);
+    } else if (type === 'bar-group') {
+      animateBarGroup(el);
+    } else if (type === 'counter-group') {
+      // kpi values inside behave
+      el.querySelectorAll('[data-kpi]').forEach((kpiEl, i) => {
+        setTimeout(() => animateNumber(kpiEl), i * 120);
+      });
+    } else {
+      el.classList.add('is-visible');
+    }
+  });
+}, {
+  threshold: 0.2,
+  rootMargin: '0px 0px -40px 0px'
+});
+
+function observe(el, type) {
+  if (reducedMotion) { el.classList.add('is-visible'); return; }
+  el.dataset.animType = type || 'default';
+  io.observe(el);
+}
+
+// ── NUMBER ROLL-UP ──
+// Parses prefix, number, suffix from data attributes
+// Animates only the numeric portion with spring easing
+function animateNumber(el) {
+  if (reducedMotion) return;
+  const target  = parseFloat(el.dataset.count);
+  const prefix  = el.dataset.prefix  || '';
+  const suffix  = el.dataset.suffix  || '';
+  const decimal = el.dataset.decimal === 'true';
+  const dur     = parseFloat(el.dataset.dur) || 1400; // ms
+  const start   = performance.now();
+
+  // Spring ease approximation: f(t) = 1 - (1-t)^3 * cos(t*π*2.5)
+  // We use a simpler parametric that matches cubic-bezier(0.16,1,0.3,1)
+  function springEase(t) {
+    return 1 - Math.pow(1 - t, 4) * (1 + 2.2 * t);
+  }
+
+  function tick(now) {
+    const elapsed = now - start;
+    const t = Math.min(elapsed / dur, 1);
+    const eased = springEase(t);
+    const current = target * eased;
+
+    if (t < 1) {
+      el.textContent = prefix + (decimal ? current.toFixed(1) : Math.floor(current)) + suffix;
+      requestAnimationFrame(tick);
+    } else {
+      // Snap to exact final formatted value
+      el.textContent = prefix + (decimal ? target.toFixed(1) : Math.floor(target)) + suffix;
+    }
+  }
+
+  el.textContent = prefix + '0' + suffix;
+  requestAnimationFrame(tick);
+}
+
+// ── BAR GROUP ANIMATION ──
+function animateBarGroup(groupEl) {
+  if (reducedMotion) {
+    groupEl.querySelectorAll('.bar').forEach(b => b.classList.add('is-visible'));
+    return;
+  }
+  const bars = groupEl.querySelectorAll('.bar');
+  bars.forEach((bar, i) => {
+    const delay = i * 22; // 22ms stagger — tight enough to feel grouped
+    bar.style.transitionProperty = 'transform';
+    bar.style.transitionDuration = '1s';
+    bar.style.transitionTimingFunction = 'cubic-bezier(0.16,1,0.3,1)';
+    bar.style.transitionDelay = delay + 'ms';
+    // Force reflow then add class
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => bar.classList.add('is-visible'));
+    });
+  });
+}
+
+// ── OBSERVE HELPER — called after each render ──
+function attachObservers() {
+  // Fade-up generics
+  document.querySelectorAll('.anim-fade-up:not([data-observed])').forEach(el => {
+    el.dataset.observed = '1';
+    observe(el, 'default');
+  });
+  // KPI cells
+  document.querySelectorAll('.anim-kpi:not([data-observed])').forEach(el => {
+    el.dataset.observed = '1';
+    observe(el, 'default');
+  });
+  // Growth numbers
+  document.querySelectorAll('.anim-gnum:not([data-observed])').forEach(el => {
+    el.dataset.observed = '1';
+    if (reducedMotion) { el.classList.add('is-visible'); return; }
+    io.observe(el);
+    el.dataset.animType = 'default';
+  });
+  // Behave KPI numbers (data-kpi)
+  document.querySelectorAll('[data-kpi]:not([data-observed])').forEach(el => {
+    el.dataset.observed = '1';
+    observe(el, 'num');
+  });
+  // Header stat nums
+  document.querySelectorAll('.stat-num[data-count]:not([data-observed])').forEach(el => {
+    el.dataset.observed = '1';
+    observe(el, 'num');
+  });
+  // Bar chart group
+  document.querySelectorAll('.bar-chart:not([data-observed])').forEach(el => {
+    el.dataset.observed = '1';
+    observe(el, 'bar-group');
+  });
+  // Contrib briefs
+  document.querySelectorAll('.anim-contrib:not([data-observed])').forEach(el => {
+    el.dataset.observed = '1';
+    observe(el, 'default');
+  });
+  // Cards
+  document.querySelectorAll('.work-card:not([data-observed])').forEach((el, i) => {
+    el.dataset.observed = '1';
+    if (reducedMotion) { el.classList.add('is-visible'); return; }
+    el.style.transitionProperty = 'opacity, transform, border-color, box-shadow';
+    el.style.transitionDuration = '.6s, .6s, .25s, .25s';
+    el.style.transitionTimingFunction = 'cubic-bezier(0.16,1,0.3,1)';
+    el.style.transitionDelay = (i % 3) * 60 + 'ms'; // 3-col stagger
+    io.observe(el);
+    el.dataset.animType = 'default';
+  });
+  // Blocks (tiktok etc)
+  document.querySelectorAll('.anim-block:not([data-observed])').forEach(el => {
+    el.dataset.observed = '1';
+    observe(el, 'default');
+  });
+  // Pills
+  document.querySelectorAll('.anim-pill:not([data-observed])').forEach(el => {
+    el.dataset.observed = '1';
+    observe(el, 'default');
+  });
+}
+
+// ════════════════════════════════════════
+// DOM BUILDERS
+// ════════════════════════════════════════
+function hasCat(item, cat) {
+  return Array.isArray(item.category) ? item.category.includes(cat) : item.category === cat;
+}
+
+function secHead(label, name, color) {
+  const el = document.createElement('div');
+  el.className = 'section-head anim-fade-up';
+  el.innerHTML = `<div class="sdot" style="background:${color};box-shadow:0 0 10px ${color}"></div><span class="sname">${name}</span><div class="sline"></div>`;
+  return el;
+}
+
+function makeCard(item, idx) {
+  const isFaze = hasCat(item, 'faze');
+  const bc = isFaze ? 'bf' : 'bc';
+  const badge = isFaze ? 'FaZe' : 'CORE';
+  const thumbUrl = `https://img.youtube.com/vi/${item.vid}/mqdefault.jpg`;
+  const thumbHq  = `https://img.youtube.com/vi/${item.vid}/hqdefault.jpg`;
+  const a = document.createElement('a');
+  a.className = 'work-card';
+  a.href = item.url; a.target = '_blank'; a.rel = 'noopener noreferrer';
+  a.innerHTML = `
+    <div class="card-thumb">
+      <img src="${thumbUrl}" alt="${item.title}" loading="lazy"
+        onerror="this.src='${thumbHq}';this.onerror=function(){this.style.display='none';this.nextElementSibling.style.display='flex'}">
+      <div class="thumb-fallback">🎬</div>
+      <div class="thumb-overlay"><div class="play-btn"><svg viewBox="0 0 16 16"><polygon points="2,1 15,8 2,15"/></svg></div></div>
+      <span class="cat-badge ${bc}">${badge}</span>
+    </div>
+    <div class="card-body">
+      <div class="card-top">
+        <span class="card-tag">${item.tag}</span>
+        <span class="ext-icon"><svg viewBox="0 0 16 16"><path d="M7 3H3a1 1 0 00-1 1v9a1 1 0 001 1h9a1 1 0 001-1V9"/><polyline points="10 2 14 2 14 6"/><line x1="14" y1="2" x2="7" y2="9"/></svg></span>
+      </div>
+      <p class="card-name">${item.title}</p>
+      <p class="card-concept">${item.concept}</p>
+      <p class="card-desc">${item.desc}</p>
+      <div class="card-role">
+        <span class="role-diamond">◆</span>
+        <div><span class="role-label">${item.roleLabel}</span><span class="role-detail">${item.roleDetail}</span></div>
+      </div>
+    </div>`;
+  return a;
+}
+
+function makeBehave(container) {
+  container.appendChild(secHead('Account Leadership · Jan 2022 – Apr 2025', 'Behave Modeling Agency', '#b8ff9f'));
+  const maxV = Math.max(...monthly.map(d => d[1]));
+  const yrColor = m => m.includes('22') ? 'rgba(184,255,159,.32)' : m.includes('23') ? 'rgba(184,255,159,.56)' : m.includes('24') ? 'rgba(184,255,159,.88)' : 'rgba(184,255,159,.72)';
+  const yrLabel = ['2022','','','','','','','','','','','','2023','','','','','','','','','','','','2024','','','','','','','','','','','','2025','','',''];
+
+  const block = document.createElement('div');
+  block.className = 'behave-block anim-fade-up';
+  block.innerHTML = `
+    <div class="behave-header">
+      <div style="display:flex;align-items:center;gap:14px">
+        <div class="bhv-logo">BHV</div>
+        <div><p class="bhv-name">Behave Modeling Agency</p><p class="bhv-role">Head of Accounts · KPI & Growth Management</p></div>
+      </div>
+      <span class="bhv-tenure">Jan 2022 – Apr 2025 · 3+ yrs</span>
+    </div>
+
+    <div class="kpi-grid">
+      <div class="kpi-cell anim-kpi" style="--delay:0ms">
+        <p class="kpi-label">Peak Annual Revenue</p>
+        <p class="kpi-value"><span data-kpi data-count="15" data-prefix="$" data-suffix="M" data-dur="1400">$15M</span></p>
+        <p class="kpi-sub">2024 full-year — highest in agency history</p>
+      </div>
+      <div class="kpi-cell anim-kpi" style="--delay:100ms">
+        <p class="kpi-label">Revenue Growth YoY</p>
+        <p class="kpi-value">+<span data-kpi data-count="69" data-prefix="" data-suffix="%" data-dur="1500">69%</span></p>
+        <p class="kpi-sub">Year-over-year 2022 → 2023 under my leadership</p>
+      </div>
+      <div class="kpi-cell anim-kpi" style="--delay:200ms">
+        <p class="kpi-label">Peak Single Month</p>
+        <p class="kpi-value">$<span data-kpi data-count="1.38" data-prefix="" data-suffix="M" data-decimal="true" data-dur="1300">1.38M</span></p>
+        <p class="kpi-sub">Oct 2024 — single-month record during tenure</p>
+      </div>
+      <div class="kpi-cell anim-kpi" style="--delay:300ms">
+        <p class="kpi-label">Total Scale</p>
+        <p class="kpi-value">+<span data-kpi data-count="135" data-prefix="" data-suffix="%" data-dur="1600">135%</span></p>
+        <p class="kpi-sub">Growth from Jan 2022 start to peak month</p>
+      </div>
+    </div>
+
+    <div class="chart-area">
+      <p class="chart-label">Monthly Revenue · Jan 2022 – Apr 2025 &nbsp;—&nbsp; hover bars for exact figures</p>
+      <div class="bar-chart" id="bhv-bars"></div>
+    </div>
+
+    <div class="growth-row">
+      <div class="growth-cell">
+        <p class="growth-eye">Year-over-year growth</p>
+        <div class="growth-nums">
+          <div>
+            <p class="g-num anim-gnum" style="--delay:0ms"
+               data-kpi data-count="69" data-prefix="+" data-suffix="%" data-dur="1400">+69%</p>
+            <p class="g-desc anim-gnum" style="--delay:60ms">2022 → 2023<br>$7.8M to $13.2M</p>
+          </div>
+          <div>
+            <p class="g-num anim-gnum" style="--delay:140ms"
+               data-kpi data-count="14" data-prefix="+" data-suffix="%" data-dur="1200">+14%</p>
+            <p class="g-desc anim-gnum" style="--delay:200ms">2023 → 2024<br>$13.2M to $15M</p>
+          </div>
+        </div>
+      </div>
+      <div class="growth-cell">
+        <p class="growth-eye">Avg revenue per model</p>
+        <div class="growth-nums">
+          <div>
+            <p class="g-num neutral anim-gnum" style="--delay:80ms"
+               data-kpi data-count="36" data-prefix="$" data-suffix="K" data-dur="1100">$36K</p>
+            <p class="g-desc anim-gnum" style="--delay:140ms">Dec 2022 baseline</p>
+          </div>
+          <div>
+            <p class="g-num anim-gnum" style="--delay:180ms"
+               data-kpi data-count="40" data-prefix="$" data-suffix="K" data-dur="1200">$40K</p>
+            <p class="g-desc anim-gnum" style="--delay:240ms">Dec 2024 · +11% per model</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bhv-pills">
+      <span class="bhv-pill anim-pill" style="--delay:0ms">KPI Management</span>
+      <span class="bhv-pill anim-pill" style="--delay:60ms">Account Growth</span>
+      <span class="bhv-pill anim-pill" style="--delay:120ms">Revenue Operations</span>
+      <span class="bhv-pill anim-pill" style="--delay:180ms">Talent Development</span>
+      <span class="bhv-pill anim-pill" style="--delay:240ms">Data-Driven Strategy</span>
+    </div>`;
+
+  container.appendChild(block);
+
+  requestAnimationFrame(() => {
+    const el = document.getElementById('bhv-bars');
+    if (!el) return;
+    monthly.forEach(([m, v], i) => {
+      const pct = (v / maxV) * 100;
+      const wrap = document.createElement('div');
+      wrap.className = 'bar-wrap';
+      wrap.innerHTML = `
+        <div class="bar-tooltip">$${(v/1000000).toFixed(2)}M · ${m}</div>
+        <div class="bar" style="height:${pct}%;background:${yrColor(m)}"></div>
+        <div class="bar-yr">${yrLabel[i]}</div>`;
+      el.appendChild(wrap);
+    });
+  });
+}
+
+function makeContrib(text, cls) {
+  const el = document.createElement('div');
+  el.className = `contrib-brief ${cls} anim-contrib`;
+  el.innerHTML = `<p class="contrib-eye">My contribution</p><p class="contrib-txt">${text}</p>`;
+  return el;
+}
+
+// ════════════════════════════════════════
+// RENDER
+// ════════════════════════════════════════
+let activeFilter = 'all';
+
+function render(filter) {
+  const container = document.getElementById('main-content');
+  container.innerHTML = '';
+  observed.clear(); // Reset so re-renders work
+
+  // 1. BEHAVE first
+  makeBehave(container);
+  const sp1 = document.createElement('div'); sp1.style.height = '48px';
+  container.appendChild(sp1);
+
+  // 2. Video sections
+  const sections = [
+    { key:'faze', label:'FaZe Clan',    color:'#ff4040', cls:'bf' },
+    { key:'core', label:'CORE / Adapt', color:'#4090ff', cls:'bc' },
+  ];
+
+  sections.forEach(sec => {
+    const items = filter === 'all'   ? works.filter(w => hasCat(w, sec.key))
+                : filter === 'brand' ? works.filter(w => hasCat(w,'brand') && hasCat(w, sec.key))
+                : filter === sec.key ? works.filter(w => hasCat(w, sec.key))
+                : [];
+    if (!items.length) return;
+
+    container.appendChild(secHead('Client', sec.label, sec.color));
+    container.appendChild(makeContrib(contributions[sec.key], sec.cls));
+
+    const grid = document.createElement('div');
+    grid.className = 'card-grid';
+    items.forEach((item, i) => grid.appendChild(makeCard(item, i)));
+    container.appendChild(grid);
+
+    const sp = document.createElement('div'); sp.style.height = '40px';
+    container.appendChild(sp);
+  });
+
+  // 3. Social
+  container.appendChild(secHead('Social Strategy', 'GEN1Anime · TikTok', '#e8ff47'));
+
+  const tk = document.createElement('a');
+  tk.className = 'tiktok-block anim-block';
+  tk.href = 'https://www.tiktok.com/@gen1anime';
+  tk.target = '_blank'; tk.rel = 'noopener noreferrer';
+  tk.innerHTML = `
+    <div class="tiktok-top">
+      <div class="tiktok-icon"><svg viewBox="0 0 24 24" fill="white"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V9a8.16 8.16 0 004.77 1.52V7.08a4.85 4.85 0 01-1-.39z"/></svg></div>
+      <div><p class="tiktok-handle">GEN1Anime</p><p class="tiktok-platform">TikTok · @gen1anime</p></div>
+      <span class="poc-badge">Proof of concept</span>
+    </div>
+    <div class="tiktok-divider"></div>
+    <p class="tiktok-statement">GEN1Anime is a <strong>personal proof of concept</strong> — built from scratch with no existing audience, no team, and no budget. The growth and engagement here reflects the same organic content strategy I apply at scale with larger creators. <strong>What you see on this page is the solo version.</strong> With a curated community behind it, dedicated creators feeding content into the ecosystem, and viral moments I help engineer — the ceiling lifts dramatically. The strategy doesn't change. <strong>The amplification does.</strong></p>
+    <div class="pill-row">
+      <span class="pill anim-pill" style="--delay:0ms">Organic growth</span>
+      <span class="pill anim-pill" style="--delay:60ms">Community building</span>
+      <span class="pill anim-pill" style="--delay:120ms">Viral engineering</span>
+      <span class="pill anim-pill" style="--delay:180ms">Niche authority</span>
+      <span class="pill anim-pill" style="--delay:240ms">Content strategy</span>
+    </div>`;
+  container.appendChild(tk);
+
+  // Attach observers after DOM settles
+  requestAnimationFrame(() => requestAnimationFrame(attachObservers));
+}
+
+// Filter buttons — no animation per spec
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    activeFilter = btn.dataset.filter;
+    render(activeFilter);
+  });
+});
+
+// Header stat nums — observe immediately on load
+document.querySelectorAll('.stat-num[data-count]').forEach(el => {
+  observe(el, 'num');
+});
+
+render('all');
+</script>
+</body>
+</html>
